@@ -181,6 +181,7 @@ def main():
 				try:
 					msg = input("shell:> ") + '\0'
 					active_sock.send(encrypt(padding(b'0', msg.encode())))
+					# TODO: add commands
 				
 				except KeyboardInterrupt:
 					active_sock.send(_cipher(b"exterminate\0", encrypt))
