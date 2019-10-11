@@ -35,6 +35,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 
 			char *decrypted = asset::_cipher(data, asset::decrypt);
+			// TODO: recv more than 16 bytes of encrypted data
 			
 			raw_out(data);
 			if(strcmp(data, "exterminate") == 0) break;
