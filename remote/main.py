@@ -51,8 +51,7 @@ def send_file(sock, file_path):
 				for i in range(0, chunks):
 					sock.send(_cipher(_file.read(AES_BUFF), encrypt))
 
-					if i % ((chunks)//9) == 0:
-						print("#", end="")
+
 
 				if remaining_bytes != 0:
 					zeros_needed = AES_BUFF - remaining_bytes;
